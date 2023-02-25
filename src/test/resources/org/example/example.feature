@@ -1,6 +1,55 @@
 Feature: An example
 
-  Scenario: The example
-    Given an example scenario
-    When all step definitions are implemented
-    Then the scenario passes
+  Scenario: Email positive #1
+    Given I am on the main page
+    When I write the email address of "test@tester.com"
+    And I click the submit button
+    Then the confirmation pop-up appears
+
+  Scenario: Email positive #2
+    Given I am on the main page
+    When I write the email address of "test@hoteloffice.ro"
+    And I click the submit button
+    Then the confirmation pop-up appears
+
+  Scenario: Institutional email negative #1
+    Given I am on the main page
+    When I write the email address of "s.bedregianu.student.unitbv.ro"
+    And I click the submit button
+    Then the border of the email field turns red
+
+  Scenario: Negative #2
+    Given I am on the main page
+    When I write the email address of "testsssstestssssvtestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestsssstestssss"
+    And I click the submit button
+    Then the border of the email field turns red
+
+  Scenario: Virtual Read More button
+    Given I am on the main page
+    When I click on the Read More button for the Virtual classes
+    Then the page with the Virtual header opens
+
+  Scenario: Learn Fundamentals Read More button
+    Given I am on the main page
+    When I click on Learn Fundamentals Read More Button
+    Then the page with the Learn Fundamentals header opens
+
+  Scenario: Back to top button
+    Given I am on the main page
+    When I click on the arrow button in the left bottom of the page
+    Then the page moves back to the top
+
+  Scenario: What You'll Learn navigation bar
+    Given I am on the main page
+    When I click on the What You'll Learn in navigation bar
+    Then the page will scroll to the Learn Fundamentals section
+
+  Scenario: Instructors navigation bar
+    Given I am on the main page
+    When I click the Instructors in navigation bar
+    Then the page will scroll to the Instructors section
+
+  Scenario: FAQ first question
+    Given I am on the main page
+    When I click on the first question in FAQ section
+    Then the question will expand showing the answer
