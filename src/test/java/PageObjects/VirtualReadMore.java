@@ -12,5 +12,22 @@ public class VirtualReadMore {
         PageFactory.initElements(driver, this);
     }
 
+    public WebElement getVirtualHeader() {
+        return virtualHeader;
+    }
+
+    @FindBy(xpath = "/html/body/h1")
+    private WebElement virtualHeader;
+
+    public WebElement getReturnButtonFromVirtual() {
+        return returnButtonFromVirtual;
+    }
+
+    @FindBy(xpath = "/html/body/a")
+    private WebElement returnButtonFromVirtual;
+
+    public void clickOnReturnButtonFromVirtual(){
+        this.returnButtonFromVirtual.click();
+    }
 }
 

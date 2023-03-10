@@ -10,6 +10,13 @@ public class MainPage {
         return emailField;
     }
 
+    public WebElement getOurInstructorsTitle() {
+        return ourInstructorsTitle;
+    }
+
+    @FindBy(xpath = "//*[@id=\"instructors\"]/div/h2")
+    private WebElement ourInstructorsTitle;
+
     @FindBy(xpath = "/html/body/section[2]/div/div/div/input")
     private WebElement emailField;
 
@@ -90,6 +97,8 @@ public class MainPage {
     @FindBy(xpath = "//*[@id=\"instructors\"]")
     private WebElement instructorsSection;
 
+    @FindBy(xpath = "/html/body/section[1]/div/div/div/a")
+    private WebElement startEnrollmentButton;
     public MainPage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
@@ -114,4 +123,6 @@ public class MainPage {
     public void clickOnInstructorsNav(){this.instructorsNavButton.click();}
 
     public void clickOnFirstQuestion(){this.firstQuestionFAQ.click();}
+
+    public void clickOnStartTheEnrollmentButton(){this.startEnrollmentButton.click();}
 }
