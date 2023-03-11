@@ -68,19 +68,23 @@ Feature: An example
     When I click on the first question in FAQ section
     Then the question will expand showing the answer
 
-  Scenario: Opening The Enrollment Page
+  Scenario: Start the Enrollment
     Given I am on the main page
     When I click on Start The Enrollment button
     Then the Enrollment page opens
 
-  Scenario: Write information in Enrollment Page
+  Scenario: Complete information in the Enrollment page
     Given I am on the main page
     When I click on Start The Enrollment button
     Then the Enrollment page opens
-    And I write my first name as "Doe"
-    And I write my last name as "John"
-    And I write my username as "JohnDoe58"
+    And I write my first name as "Max"
+    And I write my last name as "Volume"
+    And I write my username as "MaxVolume01"
     And I write a password as "simplepassword"
     And I write again the password as "simplepassword"
     When I click on the Next button
-    
+    And I write an email as "maxvolume13@platform.com"
+
+
+
+

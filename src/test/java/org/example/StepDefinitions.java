@@ -10,11 +10,12 @@ import io.cucumber.java.en.*;
 import io.cucumber.java.en_scouse.An;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
 public class StepDefinitions {
 
-   private final WebDriver driver = new ChromeDriver();
+   private final WebDriver driver = new FirefoxDriver();
    private MainPage mainPage;
    private VirtualReadMore virtualReadMore;
 
@@ -50,7 +51,7 @@ public class StepDefinitions {
    }
 
    @When("I click on Start The Enrollment button")
-   public void iClickStartTheEnrollemntButton(){
+   public void iClickStartTheEnrollmentButton(){
       mainPage.clickOnStartTheEnrollmentButton();
    }
 
@@ -80,7 +81,7 @@ public class StepDefinitions {
    }
 
    @Then("the page will scroll to the Learn Fundamentals section")
-   public void learnFundamentalsSecton(){
+   public void learnFundamentalsSection(){
       Assert.assertEquals(mainPage.getLearnFundamentalsTitle().getText(), "Learn The Fundamentals");
    }
 
@@ -136,6 +137,10 @@ public class StepDefinitions {
       enrollmentPage.clickOnNextButton();
    }
 
+   @When("I click on the Next button again")
+      public void iClickOnSecondNextButton(){
+      enrollmentPage.clickOnSecondNextButton();
+      }
    @And("I click the Return Button below Virtual header")
    public void iClickOnReturnButtonFromVirtual(){
       virtualReadMore.clickOnReturnButtonFromVirtual();
@@ -159,7 +164,24 @@ public class StepDefinitions {
    public void writePassword(String string){enrollmentPage.writePasswordToField(string);}
 
    @And("I write again the password as {string}")
-   public void writeCPassord(String string){enrollmentPage.writeCPasswordToField(string);}
+   public void writeCPassword(String string){enrollmentPage.writeCPasswordToField(string);}
+
+   @And("I write an email as {string}")
+   public void writeEmail(String string){enrollmentPage.writeEmailToField(string);}
+
+   @And("I write phone number as {string}")
+   public void writePhone(String string){enrollmentPage.writePhoneToField(string);}
+
+   @And("I write country as {string}")
+   public void writeCountry(String string){enrollmentPage.writeCountryToField(string);}
+
+   @And("I write city as {string}")
+   public void writeCity(String string){enrollmentPage.writeCityToField(string);}
+
+   @And("I write post code as {string}")
+   public void writePostCode(String string){enrollmentPage.writePostCodeToField(string);}
+
+
    @After
    public void cleanUp() {
       driver.quit();
