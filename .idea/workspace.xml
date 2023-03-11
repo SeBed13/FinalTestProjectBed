@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edec9531-d3c7-4d96-9d3e-b210c34562df" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/geckodriver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/EnrollmentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/EnrollmentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/StepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/org/example/example.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/org/example/example.feature" afterDir="false" />
-    </list>
+    <list default="true" id="edec9531-d3c7-4d96-9d3e-b210c34562df" name="Changes" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +18,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -184,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678465829321</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update">
+      <created>1678529151234</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678529151234</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
