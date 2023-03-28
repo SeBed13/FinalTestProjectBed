@@ -84,6 +84,20 @@ Feature: An example
     And I write again the password as "simplepassword"
     When I click on the Next button
     And I write an email as "maxvolume13@platform.com"
+    And I write phone number as "078989898989"
+    And I write country as "Romania"
+    And I write city as "Brasov"
+    And I write post code as "500449"
+    When I click on the Next button again
+    And I select the third option - Software Testing - Automation & Manual tester certificate
+    When I click on Next once again
+    And I write cardholder name as "Max Volume"
+    And I write card number as "4539569261682385"
+    And I write CVC as "123"
+    And I select the expiration month of card
+    And I select the expiration year of card
+    When I click on Next one more time
+    Then I am successfully registered and I am able to click to return to homepage
 
 
 

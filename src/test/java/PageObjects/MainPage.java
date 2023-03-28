@@ -104,6 +104,8 @@ public class MainPage {
         PageFactory.initElements(driver, this);
     }
 
+
+
     public void clickOnSubmitButton() {
         this.submitButton.click();
     }
@@ -125,4 +127,6 @@ public class MainPage {
     public void clickOnFirstQuestion(){this.firstQuestionFAQ.click();}
 
     public void clickOnStartTheEnrollmentButton(){this.startEnrollmentButton.click();}
+
+
 }

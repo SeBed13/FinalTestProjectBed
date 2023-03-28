@@ -8,9 +8,11 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 
 import io.cucumber.java.en_scouse.An;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class StepDefinitions {
@@ -29,7 +31,7 @@ public class StepDefinitions {
       driver.manage().window().maximize();
 
    }
-
+// TC_001
    @Given("I am on the main page")
     public void iAmOnTheMainPage() {
       driver.get("file:///Users/sebastian/Desktop/site%20curs%20test/Testing-Env/index.html");
@@ -38,7 +40,15 @@ public class StepDefinitions {
    public void iWriteTheEmailAddressOf(String string) {
       mainPage.writeEmailToEmailField(string);
    }
-
+   @When("I click the submit button")
+   public void iClickTheSubmitButton() {
+      mainPage.clickOnSubmitButton();
+   }
+   @Then("the confirmation pop-up appears")
+   public void theConfirmationPopUPAppear(){
+      driver.switchTo().alert().accept();
+   }
+   // TC_002
    @When("I click on the Read More button for the Virtual classes")
    public void iClickTheVirtualReadMoreButton(){
       Utils.scrollToElement(driver, mainPage.getVirtualTitle());
@@ -60,10 +70,7 @@ public class StepDefinitions {
       Assert.assertEquals(enrollmentPage.getEnrollmentPageTitle().getText(), "Sign up for the Software Testing course");
    }
 
-   @Then("the confirmation pop-up appears")
-   public void theConfirmationPopUPAppear(){
-      driver.switchTo().alert().accept();
-   }
+
 
    @Then("the page with the Virtual header opens")
    public void thePageWithTheVirtualHeaderOpens(){
@@ -101,10 +108,19 @@ public class StepDefinitions {
 
    }
 
+   // TODO: Refactor the code as it checks two objects of the same type. What you want to verify in this method is that you return to the main page thus you will need a WebElement, not an object.
    @Then("I will return to main page")
    public void returnToMainPage(){
-      Assert.assertEquals(mainPage, mainPage);
+      Assert.assertEquals(mainPage.getTheTop().getText(), "Become a Certified Software Tester\n" +
+              "We focus on teaching our students the fundamentals of software testing along with preparation for their ISTQB Foundation Level Certification\n" +
+              "Start The Enrollment");
    }
+
+   @Then("I am successfully registered and I am able to click to return to homepage")
+   public void returnToHomePage(){
+      enrollmentPage.clickOnReturnToHomepage();
+   }
+
    @When("I click on Learn Fundamentals Read More Button")
    public void iClickTheFundamentalsReadMore(){
       Utils.scrollToElement(driver, mainPage.getLearnFundamentalsTitle());
@@ -116,10 +132,7 @@ public class StepDefinitions {
       Utils.scrollToElement(driver, mainPage.getContactInfoTitle());
       mainPage.clickOnBackToTopButton();}
 
-   @When("I click the submit button")
-   public void iClickTheSubmitButton() {
-      mainPage.clickOnSubmitButton();
-   }
+
 
    @When("I click the Instructors in navigation bar")
    public void iClickInstructorsNav(){
@@ -141,6 +154,13 @@ public class StepDefinitions {
       public void iClickOnSecondNextButton(){
       enrollmentPage.clickOnSecondNextButton();
       }
+
+   @When("I click on Next once again")
+   public void iClickOnThirdNextButton(){enrollmentPage.clickOnThirdNextButton();}
+
+   @When("I click on Next one more time")
+   public void iClickOnFourthNextButton(){enrollmentPage.clickOnFourthNextButton();}
+
    @And("I click the Return Button below Virtual header")
    public void iClickOnReturnButtonFromVirtual(){
       virtualReadMore.clickOnReturnButtonFromVirtual();
@@ -181,7 +201,31 @@ public class StepDefinitions {
    @And("I write post code as {string}")
    public void writePostCode(String string){enrollmentPage.writePostCodeToField(string);}
 
+   @And("I select the third option - Software Testing - Automation & Manual tester certificate")
+   public void iClickOnThirdOption(){enrollmentPage.clickOnThirdRadioButton();}
 
+   @And("I write cardholder name as {string}")
+   public void writeCardHolder(String cardHolder){enrollmentPage.writeCardHolderNameToField(cardHolder);}
+
+   @And("I write card number as {string}")
+   public void writeCardNumber(String cardNumber){enrollmentPage.writeCardNumberToField(cardNumber);}
+
+   @And("I write CVC as {string}")
+   public void writeCVC(String string){enrollmentPage.writeCVCToField(string);}
+
+   @And("I select the expiration month of card")
+   public void selectMonth(){
+      enrollmentPage.clickMonth();
+      Select dropdown = new Select(driver.findElement(By.id("month")));
+      dropdown.selectByVisibleText("March");
+   }
+
+   @And("I select the expiration year of card")
+   public void selectYear(){
+      enrollmentPage.clickYear();
+      Select dropdown1 = new Select(driver.findElement(By.id("year")));
+      dropdown1.selectByVisibleText("2025");
+   }
    @After
    public void cleanUp() {
       driver.quit();
