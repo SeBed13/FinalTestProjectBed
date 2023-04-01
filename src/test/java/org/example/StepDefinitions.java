@@ -1,9 +1,6 @@
 package org.example;
 
-import PageObjects.EnrollmentPage;
-import PageObjects.FundamentalsPage;
-import PageObjects.MainPage;
-import PageObjects.VirtualReadMore;
+import PageObjects.*;
 import io.cucumber.java.After;
 import io.cucumber.java.en.*;
 
@@ -23,11 +20,17 @@ public class StepDefinitions {
 
    private EnrollmentPage enrollmentPage;
    private FundamentalsPage fundamentalsPage;
+
+   private TwitterPage twitterPage;
+
+   private InstagramPage instagramPage;
    public StepDefinitions(){
       mainPage = new MainPage(driver);
       virtualReadMore = new VirtualReadMore(driver);
       fundamentalsPage = new FundamentalsPage(driver);
       enrollmentPage = new EnrollmentPage(driver);
+      twitterPage = new TwitterPage(driver);
+      instagramPage = new InstagramPage(driver);
       driver.manage().window().maximize();
 
    }
@@ -121,11 +124,18 @@ public class StepDefinitions {
       enrollmentPage.clickOnReturnToHomepage();
    }
 
+   @Then("The Twitter page opens")
+   public void twitterPageOpen(){twitterPage.getTwitterLogo();}
+
+   @Then("The Instagram page opens")
+   public void instagramPageOpen(){instagramPage.getCookiesInstagram();}
+
    @When("I click on Learn Fundamentals Read More Button")
    public void iClickTheFundamentalsReadMore(){
       Utils.scrollToElement(driver, mainPage.getLearnFundamentalsTitle());
       mainPage.clickOnLearnFundamentalsButton();
    }
+
 
    @When("I click on the arrow button in the left bottom of the page")
    public void iClickBackToTopButton(){
@@ -170,6 +180,14 @@ public class StepDefinitions {
    public void iClickOnReturnButtonFromFundamentals(){
       fundamentalsPage.clickOnReturnButtonFromFundamentals();
    }
+
+   @And("I click on Twitter logo in first instructor box")
+   public void iClickOnTwitterIconFirstBox(){Utils.scrollToElement(driver, mainPage.getOurInstructorsTitle());
+   mainPage.clickOnTwitterForFirstInstructor();}
+
+   @And("I click on Instagram logo in first instructor box")
+   public void iClickOnIntagramIconFirstBox(){Utils.scrollToElement(driver, mainPage.getInstructorsSection());
+   mainPage.clickOnInstagramForFirstInstructor();}
 
    @And("I write my first name as {string}")
    public void writeFirstName(String string){enrollmentPage.writeFirstNameToField(string);}

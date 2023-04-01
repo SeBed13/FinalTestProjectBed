@@ -104,7 +104,11 @@ public class MainPage {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "/html/body/section[7]/div/div/div[1]/div/div/a[1]/i")
+    private WebElement twitterFirstInstructor;
 
+    @FindBy(xpath = "/html/body/section[7]/div/div/div[1]/div/div/a[4]/i")
+    private WebElement instagramFirstInstructor;
 
     public void clickOnSubmitButton() {
         this.submitButton.click();
@@ -128,5 +132,8 @@ public class MainPage {
 
     public void clickOnStartTheEnrollmentButton(){this.startEnrollmentButton.click();}
 
+    public void clickOnTwitterForFirstInstructor(){this.twitterFirstInstructor.click();}
+
+    public void clickOnInstagramForFirstInstructor(){this.instagramFirstInstructor.click();}
 
 }

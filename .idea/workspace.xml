@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edec9531-d3c7-4d96-9d3e-b210c34562df" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/InstagramPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObjects/TwitterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/EnrollmentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/EnrollmentPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PageObjects/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PageObjects/MainPage.java" afterDir="false" />
@@ -55,7 +57,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: example">
+  <component name="RunManager">
     <configuration name="Feature: example" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/org/example/example.feature" />
@@ -64,26 +66,6 @@
       <module name="FinalProjectBed" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: example" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Back to top button" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/org/example/example.feature" />
-      <option name="GLUE" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="FinalProjectBed" />
-      <option name="NAME_FILTER" value="^Back to top button$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Back to top button$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Back to top button" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -115,15 +97,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Learn Fundamentals Read More button" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Instructor's Instagram" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/org/example/example.feature" />
       <option name="GLUE" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="FinalProjectBed" />
-      <option name="NAME_FILTER" value="^Learn Fundamentals Read More button$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Learn Fundamentals Read More button$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Learn Fundamentals Read More button" />
+      <option name="NAME_FILTER" value="^Instructor\'s Instagram$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Instructor\'s Instagram$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Instructor's Instagram" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -135,15 +117,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Return from Virtual Page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Instructor's Twitter" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/org/example/example.feature" />
       <option name="GLUE" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="FinalProjectBed" />
-      <option name="NAME_FILTER" value="^Return from Virtual Page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Return from Virtual Page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Return from Virtual Page" />
+      <option name="NAME_FILTER" value="^Instructor\'s Twitter$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Instructor\'s Twitter$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Instructor's Twitter" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Instructors navigation bar" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/org/example/example.feature" />
+      <option name="GLUE" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="FinalProjectBed" />
+      <option name="NAME_FILTER" value="^Instructors navigation bar$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Instructors navigation bar$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Instructors navigation bar" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -157,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: example" />
         <item itemvalue="Cucumber Java.Scenario: Complete information in the Enrollment page" />
-        <item itemvalue="Cucumber Java.Scenario: Back to top button" />
-        <item itemvalue="Cucumber Java.Scenario: Return from Virtual Page" />
-        <item itemvalue="Cucumber Java.Scenario: Learn Fundamentals Read More button" />
+        <item itemvalue="Cucumber Java.Scenario: Instructor's Instagram" />
+        <item itemvalue="Cucumber Java.Scenario: Instructor's Twitter" />
+        <item itemvalue="Cucumber Java.Scenario: Instructors navigation bar" />
+        <item itemvalue="Cucumber Java.Feature: example" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678529442163</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update">
+      <created>1679999117052</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679999117052</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

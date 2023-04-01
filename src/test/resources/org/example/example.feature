@@ -63,6 +63,7 @@ Feature: An example
     When I click the Instructors in navigation bar
     Then the page will scroll to the Instructors section
 
+
   Scenario: FAQ first question
     Given I am on the main page
     When I click on the first question in FAQ section
@@ -99,6 +100,18 @@ Feature: An example
     When I click on Next one more time
     Then I am successfully registered and I am able to click to return to homepage
 
+    Scenario: Instructor's Twitter
+      Given I am on the main page
+      When I click the Instructors in navigation bar
+      Then the page will scroll to the Instructors section
+      And I click on Twitter logo in first instructor box
+      Then The Twitter page opens
 
+    Scenario: Instructor's Instagram
+      Given I am on the main page
+      When I click the Instructors in navigation bar
+      Then the page will scroll to the Instructors section
+      And I click on Instagram logo in first instructor box
+      Then The Instagram page opens
 
 

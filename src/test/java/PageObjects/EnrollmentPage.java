@@ -20,11 +20,6 @@ public class EnrollmentPage {
 
 
 
-
-    public WebElement getEnrollmentPageTitle() {
-        return enrollmentPageTitle;
-    }
-
     @FindBy(xpath = "/html/body/div/div/h2")
     private WebElement enrollmentPageTitle;
 
@@ -168,4 +163,7 @@ public class EnrollmentPage {
         this.returnToHomepage.click();
     }
 
+    public WebElement getEnrollmentPageTitle() {
+        return enrollmentPageTitle;
+    }
 }
